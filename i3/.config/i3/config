@@ -149,9 +149,9 @@ workspace $ws2 output $m2
 workspace $ws3 output $m2
 workspace $ws4 output $m2
 workspace $ws5 output $m2
-workspace $ws6 output $m1
+workspace $ws6 output $m2
 workspace $ws7 output $m1
-workspace $ws8 output $m1
+workspace $ws8 output $m2
 workspace $ws9 output $m1
 workspace $ws10 output $m1
 
@@ -159,7 +159,10 @@ workspace $ws10 output $m1
 assign [class="Brave-browser"] $ws2
 assign [class="Gnome-terminal"] $ws3
 assign [class="Code - Insiders"] $ws4
-assign [class="jetbrains-idea-ce"] $ws5
+assign [class="Blender"] $ws5
+assign [class="Godot"] $ws6
+assign [class="Gimp-2.10"] $ws7
+assign [class="jetbrains-idea-ce"] $ws8
 assign [class="okular"] $ws9
 assign [class="mpv"] $ws10
 

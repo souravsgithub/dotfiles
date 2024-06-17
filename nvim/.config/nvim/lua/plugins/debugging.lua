@@ -25,6 +25,8 @@ return {
 			dapui.close()
 		end
 
+    -- configuration for c/c++/rust using codelldb
+
 		-- start codelldb automatically
 		dap.adapters.codelldb = {
 			type = "server",
@@ -50,6 +52,7 @@ return {
 		}
 
 		dap.configurations.c = dap.configurations.cpp
+    dap.configurations.rust = dap.configurations.cpp
 
     -- configuration for java
     dap.configurations.java = {
