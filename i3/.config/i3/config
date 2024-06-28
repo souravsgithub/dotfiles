@@ -19,6 +19,7 @@ exec xrandr --output "eDP-1" --primary --auto --output "HDMI-1" --right-of "eDP-
 
 # for the essential remaps
 exec_always setxkbmap -option "caps:escape_shifted_capslock"
+exec_always setxkbmap -option "ctrl:menu_rctrl"
 
 
 # start picom on startup
