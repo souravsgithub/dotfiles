@@ -18,8 +18,7 @@ exec_always feh --bg-scale "/home/sourav/Downloads/wallpaper.jpg"
 exec xrandr --output "eDP-1" --primary --auto --output "HDMI-1" --right-of "eDP-1"
 
 # for the essential remaps
-exec_always setxkbmap -option "caps:escape_shifted_capslock"
-exec_always setxkbmap -option "ctrl:menu_rctrl"
+exec_always setxkbmap -option "caps:escape_shifted_capslock,ctrl:menu_rctrl"
 
 
 # start picom on startup
@@ -70,8 +69,9 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+shift+d exec --no-startup-id dmenu_run
+# bindsym $mod+shift+d exec --no-startup-id dmenu_run  -----> uncomment this line to use dmenu with mod+shift+d
 # A more modern dmenu replacement is rofi:
+bindsym $mod+shift+d exec --no-startup-id "rofi -show run"
 bindsym $mod+d exec --no-startup-id "rofi -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
