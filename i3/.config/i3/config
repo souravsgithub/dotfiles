@@ -18,7 +18,7 @@ exec_always feh --bg-scale "/home/sourav/Downloads/wallpaper.jpg"
 exec xrandr --output "eDP-1" --primary --auto --output "HDMI-1" --right-of "eDP-1"
 
 # for the essential remaps
-exec_always setxkbmap -option "caps:escape_shifted_capslock,ctrl:menu_rctrl"
+exec_always setxkbmap -option "caps:escape_shifted_capslock"
 
 
 # start picom on startup
@@ -159,7 +159,7 @@ workspace $ws10 output $m1
 # assign applications to workspaces
 assign [class="Brave-browser"] $ws2
 assign [class="Gnome-terminal"] $ws3
-assign [class="Code - Insiders"] $ws4
+assign [class="Code"] $ws4
 assign [class="Blender"] $ws5
 assign [class="Godot"] $ws6
 assign [class="Gimp-2.10"] $ws7
