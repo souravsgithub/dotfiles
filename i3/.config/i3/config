@@ -12,7 +12,7 @@
 set $mod Mod1
 
 # added a wallpaper
-exec_always feh --bg-scale "/home/sourav/Downloads/wallpaper.jpg"
+exec_always feh --bg-fill "/home/sourav/Pictures/wallpapers/wallpaper.jpg"
 
 # add natural scrolling for touchpad
 exec_always xinput set-prop 17 "libinput Natural Scrolling Enabled" 1
