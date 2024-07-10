@@ -25,6 +25,7 @@ vim.opt.expandtab = true -- convert tabs to spaces
 vim.opt.shiftwidth = 2 -- the number of spaces inserted for each indentation
 vim.opt.tabstop = 2 -- insert 2 spaces for a tab
 vim.opt.cursorline = true -- highlight the current line
+vim.opt.guicursor = "i:block" -- this will make the steady bar into a steady block in insert mode
 vim.opt.number = true -- set numbered lines
 vim.opt.laststatus = 3
 vim.opt.showcmd = false
