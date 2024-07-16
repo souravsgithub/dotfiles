@@ -17,8 +17,15 @@ return {
 		})
 
 		local wk = require("which-key")
-		wk.register({
-			["<leader>bf"] = { "<cmd>lua vim.lsp.buf.format()<CR>", "Buffer format" },
-		})
+
+    -- old way of doing the spec, changed it for the new one
+		-- wk.register({
+		-- 	["<leader>bf"] = { "<cmd>lua vim.lsp.buf.format()<CR>", "Buffer format" },
+		-- })
+
+    wk.add({
+      { "<leader>bf", "<cmd>lua vim.lsp.buf.format()<CR>", desc = "Buffer format" },
+    })
+
 	end,
 }

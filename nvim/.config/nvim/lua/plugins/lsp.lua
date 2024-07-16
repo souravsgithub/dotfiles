@@ -28,14 +28,25 @@ return {
 			keymap("n", "gr", vim.lsp.buf.references, {})
 
 			local wk = require("which-key")
-			local mappings = {
-				["<leader>la"] = { "<cmd>lua vim.lsp.buf.code_action()<CR>", "Code Action" },
-				["<leader>li"] = { "<cmd>LspInfo<CR>", "Info" },
-				["<leader>lj"] = { "<cmd>lua vim.diagnostic.goto_next()<CR>", "Next Diagnostic" },
-				["<leader>lk"] = { "<cmd>lua vim.diagnostic.goto_prev()<CR>", "Prev Diagnostic" },
-				["<leader>lr"] = { "<cmd>lua vim.lsp.buf.rename()<CR>", "Rename" },
-			}
-			wk.register(mappings)
+
+      -- old way of doing the spec, changed it to the new one
+			-- local mappings = {
+			-- 	["<leader>la"] = { "<cmd>lua vim.lsp.buf.code_action()<CR>", "Code Action" },
+			-- 	["<leader>li"] = { "<cmd>LspInfo<CR>", "Info" },
+			-- 	["<leader>lj"] = { "<cmd>lua vim.diagnostic.goto_next()<CR>", "Next Diagnostic" },
+			-- 	["<leader>lk"] = { "<cmd>lua vim.diagnostic.goto_prev()<CR>", "Prev Diagnostic" },
+			-- 	["<leader>lr"] = { "<cmd>lua vim.lsp.buf.rename()<CR>", "Rename" },
+			-- }
+			-- wk.register(mappings)
+
+
+      wk.add({
+        { "<leader>la", "<cmd>lua vim.lsp.buf.code_action()<CR>", desc = "Code Action" },
+        { "<leader>li", "<cmd>LspInfo<CR>", desc = "Info" },
+        { "<leader>lj", "<cmd>lua vim.diagnostic.goto_next()<CR>", desc = "Next Diagnostic" },
+        { "<leader>lk", "<cmd>lua vim.diagnostic.goto_prev()<CR>", desc = "Prev Diagnostic" },
+        { "<leader>lr", "<cmd>lua vim.lsp.buf.rename()<CR>", desc = "Rename" },
+      })
 		end,
 	},
 }

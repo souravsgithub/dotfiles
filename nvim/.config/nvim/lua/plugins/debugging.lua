@@ -77,14 +77,27 @@ return {
     }
 
 		local wk = require("which-key")
-		local mappings = {
-			["<leader>db"] = { "<cmd>DapToggleBreakpoint<CR>", "toggle breakpoint" },
-			["<leader>dc"] = { "<cmd>DapContinue<CR>", "continue" },
-			["<leader>di"] = { "<cmd>DapStepInto<CR>", "step into" },
-			["<leader>do"] = { "<cmd>DapStepOver<CR>", "step over" },
-			["<leader>dt"] = { "<cmd>DapTerminate<CR>", "terminate" },
-			["<leader>dO"] = { "<cmd>DapStepOut<CR>", "step out" },
-		}
-		wk.register(mappings)
+
+    -- old way of doing spec, changed it to the new one
+
+		-- local mappings = {
+		-- 	["<leader>db"] = { "<cmd>DapToggleBreakpoint<CR>", "toggle breakpoint" },
+		-- 	["<leader>dc"] = { "<cmd>DapContinue<CR>", "continue" },
+		-- 	["<leader>di"] = { "<cmd>DapStepInto<CR>", "step into" },
+		-- 	["<leader>do"] = { "<cmd>DapStepOver<CR>", "step over" },
+		-- 	["<leader>dt"] = { "<cmd>DapTerminate<CR>", "terminate" },
+		-- 	["<leader>dO"] = { "<cmd>DapStepOut<CR>", "step out" },
+		-- }
+		-- wk.register(mappings)
+
+    wk.add({
+      { "<leader>dO", "<cmd>dapstepout<cr>", desc = "step out" },
+      { "<leader>db", "<cmd>daptogglebreakpoint<cr>", desc = "toggle breakpoint" },
+      { "<leader>dc", "<cmd>dapcontinue<cr>", desc = "continue" },
+      { "<leader>di", "<cmd>dapstepinto<cr>", desc = "step into" },
+      { "<leader>do", "<cmd>dapstepover<cr>", desc = "step over" },
+      { "<leader>dt", "<cmd>dapterminate<cr>", desc = "terminate" },
+    })
+
 	end,
 }

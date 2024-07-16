@@ -9,16 +9,29 @@ return {
       -- vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = "buffers" })
       -- vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = "tags" })
       local wk = require("which-key")
-      local mappings = {
-          ["<leader>fb"] = { "<cmd>Telescope buffers<CR>", "List buffers"},
-          ["<leader>fa"] = { "<cmd>:lua require('telescope.builtin').find_files({ hidden = true })<CR>", "Find files(all)"},
-          ["<leader>ff"] = { "<cmd>Telescope find_files<CR>", "Find files"},
-          ["<leader>fg"] = { "<cmd>Telescope live_grep<CR>", "Live grep"},
-          ["<leader>fr"] = {"<cmd>Telescope oldfiles<CR>", "Recent files"},
-          ["<leader>fh"] = {"<cmd>Telescope help_tags<CR>", "Help tags"},
-          ["<leader>fn"] = { "<cmd>enew<CR>", "New File"}
-      }
-      wk.register(mappings)
+
+      -- old way of doing spec, changed it for the new one
+
+      -- local mappings = {
+      --     ["<leader>fb"] = { "<cmd>Telescope buffers<CR>", "List buffers"},
+      --     ["<leader>fa"] = { "<cmd>:lua require('telescope.builtin').find_files({ hidden = true })<CR>", "Find files(all)"},
+      --     ["<leader>ff"] = { "<cmd>Telescope find_files<CR>", "Find files"},
+      --     ["<leader>fg"] = { "<cmd>Telescope live_grep<CR>", "Live grep"},
+      --     ["<leader>fr"] = {"<cmd>Telescope oldfiles<CR>", "Recent files"},
+      --     ["<leader>fh"] = {"<cmd>Telescope help_tags<CR>", "Help tags"},
+      --     ["<leader>fn"] = { "<cmd>enew<CR>", "New File"}
+      -- }
+      -- wk.register(mappings)
+
+      wk.add({
+        { "<leader>fa", "<cmd>:lua require('telescope.builtin').find_files({ hidden = true })<CR>", desc = "Find files(all)" },
+        { "<leader>fb", "<cmd>Telescope buffers<CR>", desc = "List buffers" },
+        { "<leader>ff", "<cmd>Telescope find_files<CR>", desc = "Find files" },
+        { "<leader>fg", "<cmd>Telescope live_grep<CR>", desc = "Live grep" },
+        { "<leader>fh", "<cmd>Telescope help_tags<CR>", desc = "Help tags" },
+        { "<leader>fn", "<cmd>enew<CR>", desc = "New File" },
+        { "<leader>fr", "<cmd>Telescope oldfiles<CR>", desc = "Recent files" },
+      })
       
     end
   },

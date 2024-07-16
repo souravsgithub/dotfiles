@@ -22,8 +22,14 @@ return {
 
   config = function()
     local wk = require("which-key")
-    wk.register({
-      ["<leader>e"] = { "<cmd>Neotree toggle<CR>", "Explorer"}
+
+    -- old way of doing the spec, changed it with the new one
+    -- wk.register({
+    --   ["<leader>e"] = { "<cmd>Neotree toggle<CR>", "Explorer"}
+    -- })
+
+    wk.add({
+      { "<leader>e", "<cmd>Neotree toggle<CR>", desc = "Explorer" },
     })
   end
 }
