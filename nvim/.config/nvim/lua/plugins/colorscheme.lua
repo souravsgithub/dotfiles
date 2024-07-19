@@ -1,8 +1,8 @@
  return {
-  "catppuccin/nvim",
-  name = "catppuccin",
+  "lunarvim/darkplus.nvim",
+  name = "darkplus",
   priority = 1000,
   config = function()
-    vim.cmd.colorscheme("catppuccin-mocha")
+    vim.cmd.colorscheme("darkplus")
   end
 }
