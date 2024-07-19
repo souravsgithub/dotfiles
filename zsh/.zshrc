@@ -105,7 +105,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias tmux="tmux -u"
 alias python="python3"
-alias ls="eza"
+#alias ls="eza"
 alias gnome-terminal="gnome-terminal --full-screen"
 
 # I added this for zoxide
@@ -121,3 +121,5 @@ export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 export PATH=$PATH:/home/sourav/.spicetify
+
+
