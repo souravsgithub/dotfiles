@@ -91,12 +91,12 @@ return {
 		-- wk.register(mappings)
 
     wk.add({
-      { "<leader>dO", "<cmd>dapstepout<cr>", desc = "step out" },
-      { "<leader>db", "<cmd>daptogglebreakpoint<cr>", desc = "toggle breakpoint" },
-      { "<leader>dc", "<cmd>dapcontinue<cr>", desc = "continue" },
-      { "<leader>di", "<cmd>dapstepinto<cr>", desc = "step into" },
-      { "<leader>do", "<cmd>dapstepover<cr>", desc = "step over" },
-      { "<leader>dt", "<cmd>dapterminate<cr>", desc = "terminate" },
+      { "<leader>dO", "<cmd>DapStepOut<CR>", desc = "step out" },
+      { "<leader>db", "<cmd>DapToggleBreakpoint<CR>", desc = "toggle breakpoint" },
+      { "<leader>dc", "<cmd>DapContinue<CR>", desc = "continue" },
+      { "<leader>di", "<cmd>DapStepInto<CR>", desc = "step into" },
+      { "<leader>do", "<cmd>DapStepOver<CR>", desc = "step over" },
+      { "<leader>dt", "<cmd>DapTerminate<CR>", desc = "terminate" },
     })
 
 	end,
