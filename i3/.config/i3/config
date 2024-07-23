@@ -166,7 +166,7 @@ workspace $ws10 output $m1
 
 # assign applications to workspaces
 assign [class="Brave-browser"] $ws2
-assign [class="Gnome-terminal"] $ws3
+assign [class="Alacritty"] $ws3
 assign [class="Code"] $ws4
 assign [class="Blender"] $ws5
 assign [class="Godot"] $ws6
