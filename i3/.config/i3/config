@@ -12,7 +12,7 @@
 set $mod Mod1
 
 # added a wallpaper
-exec_always feh --bg-fill "/home/sourav/Pictures/wallpapers/wallpaper.jpg"
+exec_always feh --bg-fill "/home/sourav/Pictures/wallpapers/access_control.jpg"
 
 # never sleep
 exec xset s off
@@ -69,7 +69,8 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+# add i3-sensible-terminal for the default gnome terminal
+bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
