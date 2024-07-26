@@ -12,7 +12,7 @@
 set $mod Mod1
 
 # added a wallpaper
-exec_always feh --bg-fill "/home/sourav/Pictures/wallpapers/white-red-green.jpg"
+exec_always feh --bg-fill "/home/sourav/Pictures/wallpapers/1328866.png"
 
 # never sleep
 exec xset s off
