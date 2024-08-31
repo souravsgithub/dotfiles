@@ -8,10 +8,10 @@ return {
   opts = {},
   config = function()
     local wk = require("which-key")
-    local opts = {
-      prefix = "<leader>",
-      mode = "n"
-    }
+    -- local opts = {
+    --   prefix = "<leader>",
+    --   mode = "n"
+    -- }
 
     -- old way of doing the specs, changed it to the new one
 
