@@ -121,5 +121,6 @@ export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 export PATH=$PATH:/home/sourav/.spicetify
+export PATH=$PATH:/home/sourav/idea-IC-242.21829.142/bin
 
 
