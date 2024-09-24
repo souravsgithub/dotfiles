@@ -19,7 +19,10 @@ font pango:monospace 8
 exec_always setxkbmap -option caps:escape
 
 # Added by me for the wallpaper
-exec_always feh --bg-scale /home/sourav/Downloads/frieren-magical-5120x2880-15165.jpeg
+exec_always feh --bg-scale /home/sourav/Downloads/japan-background-digital-art.jpg
+
+# Added by me to stop screen tearing
+exec_always picom
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -121,7 +124,7 @@ bindsym $mod+a focus parent
 # Added by me for the multi-monitor setup
 set $mm eDP-1
 set $sm HDMI-1
-exec_always xrandr --output %mm --auto --output $sm --right-of $mm
+exec_always xrandr --output %mm --auto --output $sm --above $mm
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -163,13 +166,17 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 # Added by me to define different workspaces on different monitors
 workspace $ws1 output $mm
 workspace $ws2 output $mm
-workspace $ws3 output $mm
+workspace $ws3 output $sm
 workspace $ws4 output $mm
-workspace $ws5 output $sm
+workspace $ws5 output $mm
 workspace $ws6 output $sm
 workspace $ws7 output $sm
 workspace $ws8 output $sm
-workspace $ws9 output $sm
+
+# Added by me to assign applications to specific workspaces
+assign [class="zen-alpha"] workspace $ws2
+assign [class="Alacritty"] workspace $ws3
+assign [class="Code"] workspace $ws8
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
