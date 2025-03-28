@@ -195,3 +195,4 @@ bar {
 
 exec --no-startup-id "systemctl --user import-environment DISPLAY"
 exec --no-startup-id "systemctl --user start opentabletdriver"
+bindsym $mod+Shift+d exec ~/.config/i3/toggle.sh
