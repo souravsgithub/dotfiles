@@ -34,6 +34,12 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
+# start picom
+exec_always --no-startup-id picom
+
+# change capslock key to escape
+exec_always --no-startup-id setxkbmap -option caps:escape
+
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
@@ -194,5 +200,5 @@ bar {
 }
 
 exec --no-startup-id "systemctl --user import-environment DISPLAY"
-exec --no-startup-id "systemctl --user start opentabletdriver"
+# exec --no-startup-id "systemctl --user start opentabletdriver"
 bindsym $mod+Shift+d exec ~/.config/i3/toggle.sh
