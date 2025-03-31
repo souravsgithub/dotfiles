@@ -40,6 +40,9 @@ exec_always --no-startup-id picom
 # change capslock key to escape
 exec_always --no-startup-id setxkbmap -option caps:escape
 
+# setting up the wallpaper
+exec_always --no-startup-id feh --bg-scale ~/Pictures/wallpapers/wallpaper.jpg
+
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
