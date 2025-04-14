@@ -134,6 +134,7 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
+
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
 bindsym $mod+2 workspace number $ws2
@@ -145,6 +146,21 @@ bindsym $mod+7 workspace number $ws7
 bindsym $mod+8 workspace number $ws8
 bindsym $mod+9 workspace number $ws9
 bindsym $mod+0 workspace number $ws10
+
+# assign workspaces to specific monitors
+set $fm eDP-1
+set $sm HDMI-1
+
+workspace $ws1 output $sm
+workspace $ws2 output $sm
+workspace $ws3 output $sm
+workspace $ws4 output $sm
+workspace $ws5 output $sm
+workspace $ws6 output $sm
+workspace $ws7 output $sm
+workspace $ws8 output $sm
+workspace $ws9 output $sm
+workspace $ws10 output $sm
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace number $ws1
@@ -162,6 +178,8 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 assign [class="obs"] $ws1
 assign [class="Google-chrome"] $ws2
 assign [class="Alacritty"] $ws3
+
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
